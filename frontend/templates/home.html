@@ -60,21 +60,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#work">My Works</a>
           </li>
-          {% if request.session.username %}
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="{% url 'adminlogout' %}">
-              <span class="text-lowercase">{{ request.session.username }}</span>
-              <i class="fa-solid fa-right-from-bracket"></i>
-            </a>
-          </li>
-          {% else %}
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact Me</a>
           </li>
-          {% endif %}
         </ul>
       </div>
     </div>
@@ -88,11 +76,7 @@
       <div class="table-cell">
 
         <div class="container main-center-panel">
-          {% if request.session.username %}
-          <p class="display-6 color-d">ADMIN<span class="text-warning ml-1">PANEL</span></p>
-          {% else %}
-          <p class="display-6 color-d">PORT<span class="text-warning">FOLIO</span></p>
-          {% endif %}
+          <p class="display-6 color-d">PORT<span class="text-home">FOLIO</span></p>
           <h1 class="intro-title mb-4 text-uppercase">
             <span>Christo</span><span class="ml-3 text-home">Sajy</span>
           </h1>
@@ -171,9 +155,9 @@
                     </div>
                   </div>
 
-                  <span>CSS</span> <span class="pull-right float-right">75%</span>
+                  <span>CSS</span> <span class="pull-right float-right">85%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
                       aria-valuemax="100">
                     </div>
                   </div>
@@ -223,17 +207,21 @@
                   <p class="lead text-justify"> My Resume and my other works and projects are attached below,
                     as you can view and download it. </p>
 
+                  <!-- partial -->
                   <p class="lead text-justify">
-                    <a href="{% static 'docs/resume.pdf' %}" class="btn btn-warning mt-3 w-25">
-                      <i class="fa-solid fa-eye text-white"></i> <span class="text-white"> View </span>
+                    <a href="{% static 'docs/resume.pdf' %}" class="btn btn-outline-danger mt-3">
+                      <i class="fa-solid fa-eye"></i>
+                      <span> View Resume</span>
                     </a>
 
-                    <a href="{% static 'docs/resume.pdf' %}" class="btn btn-warning mt-3 w-25 ml-2" download="download">
-                      <i class="fa-solid fa-download text-white"></i> <span class="text-white"> Download </span>
+                    <a href="{% static 'docs/resume.pdf' %}" class="btn btn-outline-danger mt-3 ml-2" download="download">
+                      <i class="fa-solid fa-download"></i>
+                      <span> Download Resume </span>
                     </a>
 
-                    <a href="https://wa.me/917736897769" class="btn btn-warning mt-3 w-25 ml-2">
-                      <i class="fa-brands fa-whatsapp text-white"></i> <span class="text-white"> Whatsapp </span>
+                    <a href="https://wa.me/917736897769" class="btn btn-outline-danger mt-3 ml-2">
+                      <i class="fa-brands fa-whatsapp"></i>
+                      <span> Whatsapp Me </span>
                     </a>
                   </p>
 
@@ -783,38 +771,17 @@
   <!--/ Section Blog End /-->
 
   <!--/ Section Contact-Footer Star /-->
-  {% if request.session.username %}
   <div class="container mt-5">
     <div class="row mt-5">
       <div class="col-sm-12">
-
         <div class="title-box text-center">
-          <h3 class="title-a">User Feedbacks</h3>
-          <p class="subtitle-a">
-            Get in contact with users to know about us more.
-          </p>
+          <h3 class="title-a"> Get in Touch </h3>
+          <p class="subtitle-a"> Get in contact with myself to know more </p>
           <div class="line-mf"></div>
         </div>
       </div>
     </div>
   </div>
-  {% else %}
-  <div class="container mt-5">
-    <div class="row mt-5">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            Get in Touch
-          </h3>
-          <p class="subtitle-a">
-            Get in contact with myself to know more.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
 
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" id="sec4">
     <div class="overlay-mf"></div>
@@ -823,44 +790,6 @@
         <div class="col-sm-12">
           <div class="contact-mf">
             <div id="contact" class="box-shadow-full">
-              {% if request.session.username %}
-              <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card border-0">
-                  <div class="card-body">
-                    <h4 class="card-title"> USER FEEDBACKS </h4>
-                    <div class="table-responsive">
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Subject</th>
-                            <th>Feedback</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {% for i in feed %}
-                          <tr>
-                            <td>{{i.Name}}</td>
-                            <td>{{i.Email}}</td>
-                            <td>{{i.Subject}}</td>
-                            <td>{{i.Message}}</td>
-                            <td>
-                              <form action="">
-                                <button class="btn btn-outline-danger" type="submit">
-                                  <i class="fa-solid fa-trash"></i>
-                                </button>
-                              </form>
-                            </td>
-                          </tr>
-                          {% endfor %}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {% else %}
               <div class="row">
                 <div class="col-md-6">
 
@@ -869,41 +798,26 @@
                   </div>
 
                   <!-- GET IN TOUCH FORM -->
-                  <div class="">
-                    <form action="{% url 'getintouch' %}" method="post" class="contactForm">
+                  <div>
+                    <form action="{% url 'contact_with_us' %}" method="post" class="contactForm">
                       {% csrf_token %}
+
                       <div class="row">
-
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name"
-                              autocomplete="off" />
+                            <input type="email" class="form-control" name="mailfrom" placeholder="Email" required />
                           </div>
                         </div>
 
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required
-                              autocomplete="off" />
-                          </div>
-                        </div>
-
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject"
-                              autocomplete="off" />
-                          </div>
-                        </div>
-
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required
-                              autocomplete="off"> Message </textarea>
+                            <textarea class="form-control" name="message" rows="3" placeholder="Message"
+                              required></textarea>
                           </div>
                         </div>
 
                         <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">
+                          <button type="submit" class="button button-a button-big button-rouded w-100">
                             <span>Send Message</span>
                           </button>
                         </div>
@@ -914,22 +828,18 @@
 
                 </div>
                 <div class="col-md-6">
+
                   <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch
-                    </h5>
+                    <h5 class="title-left">Get in Touch</h5>
                   </div>
+
                   <div class="more-info">
-                    <p class="lead">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                      expedita aperiam aliquid at.
-                      Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                      mollitia inventore?
-                    </p>
                     <ul class="list-ico">
                       <li>
                         <span class="ion-ios-location"></span>
-                        <span class="text-dark"> Kakkanad, Kochi, Ernakulam District, Kerala, India</span>
+                        <span class="text-dark">
+                          <a href="#"> Kakkanad, Kochi, Ernakulam District, Kerala, India </a>
+                        </span>
                       </li>
 
                       <li>
@@ -946,7 +856,7 @@
                   </div>
 
                   <div class="socials">
-                    <ul>
+                    <ul class="">
 
                       <!-- LINKEDIN -->
                       <li>
@@ -982,7 +892,7 @@
                   </div>
                 </div>
               </div>
-              {% endif %}
+
             </div>
           </div>
         </div>
@@ -1001,15 +911,6 @@
                   </a>
                 </strong>
                 <span> All Rights Reserved. </span>
-
-                {% if request.session.username %}
-                <span class="text-warning">Admin Panel</span>
-                {% else %}
-                <a href="{% url 'myform' %}" class="text-warning">
-                  <span>Admin? Login here</span>
-                </a>
-                {% endif %}
-
               </p>
               <div class="credits"><a href="https://bootstrapmade.com/"></a>
               </div>
