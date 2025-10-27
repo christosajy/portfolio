@@ -147,8 +147,8 @@ section {
     #home img {
         width: 150px;
         height: 150px;
-    }   
-    
+    }
+
 }
 
 #home h1 {
@@ -177,8 +177,10 @@ section {
     font-weight: 600;
     margin: 8px;
     width: auto;
-    line-height: 30px; /* vertically center text (adjust as needed) */
-    vertical-align: middle; /* keeps them aligned on the same line */
+    line-height: 30px;
+    /* vertically center text (adjust as needed) */
+    vertical-align: middle;
+    /* keeps them aligned on the same line */
     box-sizing: border-box;
     transition: 0.3s;
 }
@@ -189,19 +191,21 @@ section {
 }
 
 @media (max-width: 768px) {
-  #home .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* space between buttons */
-    width: 100%;
-  }
+    #home .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        /* space between buttons */
+        width: 100%;
+    }
 
-  #home button,
-  #home a {
-    width: 80%; /* or 100% if you want full width */
-    text-align: center;
-  }
+    #home button,
+    #home a {
+        width: 80%;
+        /* or 100% if you want full width */
+        text-align: center;
+    }
 }
 
 /* About */
@@ -761,12 +765,21 @@ footer {
 
     .image-modal .prev,
     .image-modal .next {
+        position: absolute;
         font-size: 1.6rem;
         top: 85%;
-        transform: translateY(0);
         background: rgba(0, 0, 0, 0.5);
         padding: 6px 12px;
         border-radius: 50%;
+        transform: translateY(0);
+    }
+
+    .image-modal .prev {
+        left: 10%;
+    }
+
+    .image-modal .next {
+        right: 10%;
     }
 
     .image-modal .close {
