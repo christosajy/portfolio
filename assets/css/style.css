@@ -735,28 +735,8 @@ footer {
    📱 Responsive Adjustments
    ================================ */
 
-/* Tablets */
-@media (max-width: 992px) {
-    .modal-content {
-        max-width: 90%;
-        max-height: 75%;
-    }
-
-    .image-modal .prev,
-    .image-modal .next {
-        font-size: 2rem;
-        left: 20px;
-        right: 20px;
-    }
-
-    .image-modal .close {
-        font-size: 2rem;
-        right: 25px;
-    }
-}
-
 /* Mobiles */
-@media (max-width: 600px) {
+@media (max-width: 992px) {
     .modal-content {
         max-width: 95%;
         max-height: 65%;
