@@ -127,7 +127,7 @@ section {
     text-align: center;
     background:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('/assets/img/cover-banner.jpg') no-repeat center center;
+        url('../img/cover-banner.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     padding-top: 140px;
