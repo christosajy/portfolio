@@ -768,3 +768,109 @@ footer {
         right: 20px;
     }
 }
+
+#support {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#support h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#support p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donate-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.donate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: #ff7f50;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+    min-width: 220px;
+}
+
+.donate-btn i {
+    font-size: 1.2em;
+}
+
+.donate-btn:hover {
+    transform: translateY(-3px);
+    background: #ff6347;
+}
+
+/* 📱 Mobile (max 480px) */
+@media (max-width: 480px) {
+    #support {
+        padding: 40px 15px;
+    }
+
+    #support h2 {
+        font-size: 1.6em;
+    }
+
+    #support p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .donate-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .donate-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (max-width: 768px) {
+    #support h2 {
+        font-size: 1.8em;
+    }
+
+    .donate-btn {
+        min-width: 200px;
+    }
+}
+
+/* 💻 Large_rw Screen */
+@media (min-width: 1200px) {
+    #support {
+        padding: 80px 20px;
+    }
+
+    #support h2 {
+        font-size: 2.3em;
+    }
+
+    #support p {
+        font-size: 1.15em;
+    }
+}
