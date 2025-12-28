@@ -825,15 +825,17 @@ footer {
 
     #support h2 {
         font-size: 1.6em;
+        margin: 30px 0;
     }
 
     #support p {
         font-size: 1em;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .donate-buttons {
         flex-direction: column;
+        margin: 20px 0;
         gap: 15px;
     }
 
@@ -843,17 +845,6 @@ footer {
         margin: 0 auto;
         padding: 12px;
         font-size: 0.95rem;
-    }
-}
-
-/* 📱 Tablet (481px – 768px) */
-@media (max-width: 768px) {
-    #support h2 {
-        font-size: 1.8em;
-    }
-
-    .donate-btn {
-        min-width: 200px;
     }
 }
 
