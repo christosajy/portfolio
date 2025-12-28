@@ -225,7 +225,8 @@ section {
 #about h2,
 #skills h2,
 #projects h2,
-#contact h2 {
+#contact h2,
+#support h2 {
     color: var(--subtext);
 }
 
@@ -558,7 +559,8 @@ footer {
     #skills h2,
     #education h2,
     #projects h2,
-    #contact h2 {
+    #contact h2,
+    #support h2 {
         margin: 40px 0 20px 0;
     }
 }
@@ -772,17 +774,12 @@ footer {
 #support {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9;
-}
-
-#support h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+    background-color: var(--bg);
 }
 
 #support p {
     font-size: 1.1em;
-    color: #555;
+    color: var(--accent);
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
@@ -802,8 +799,8 @@ footer {
     justify-content: center;
     gap: 10px;
     padding: 12px 25px;
-    background: #ff7f50;
-    color: #fff;
+    background: var(--accent);
+    color: var(--card);
     border-radius: 8px;
     font-weight: 500;
     text-decoration: none;
@@ -864,10 +861,6 @@ footer {
 @media (min-width: 1200px) {
     #support {
         padding: 80px 20px;
-    }
-
-    #support h2 {
-        font-size: 2.3em;
     }
 
     #support p {
