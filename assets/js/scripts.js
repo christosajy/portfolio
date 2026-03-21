@@ -159,3 +159,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape") closeModal();
     });
 });
+
+// Preloader
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hidden");
+    }, 1000);
+});
