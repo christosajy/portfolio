@@ -98,6 +98,10 @@ a {
     color: inherit;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -189,7 +193,7 @@ section {
     align-items: center;
     text-align: center;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../img/cover-banner-1.png') no-repeat center center;
     background-size: cover;
     color: #fff;
