@@ -1,10 +1,13 @@
 // Typing Effect
+
 const roles = [
-    "MCA Student@MACFAST|",
-    "Web Developer|",
-    "Programmer|",
-    "Tech Enthusiast|"
+    "MCA Graduate|",
+    "Python Django Developer|",
+    "Backend Developer|",
+    "Full Stack Developer|",
+    "IT Support Enthusiast|"
 ];
+
 let count = 0, index = 0, currentText = '', letter = '';
 
 (function type() {
